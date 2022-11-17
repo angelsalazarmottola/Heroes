@@ -39,17 +39,21 @@ main {
 
 .container {
     display : flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     text-align: center;
 }
 
 .cards {
     background-color:#F3F3F3;
     width: 300px;
-    height: 500px;
+    height: 550px;
     margin:20px;
     border-radius: 17px 17px 0 0;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.new-img {
+    border-radius: 17px 17px 0 0;
 }
 
 .card-img {
@@ -76,7 +80,7 @@ main {
 }
 
 .card-subtitle p {
-    margin: 10px;
+    margin: 10px 20px;
     font-size: 16px;
 }
 
@@ -87,14 +91,30 @@ main {
     font-size: 15px;
     padding: 10px 20px;
     border: none;
-    margin: 10px;
+    margin-top: 20px;
 }
 
 .copyrigth {
+    width: 100%;
     background-color:#00669F;
+    display: flex;
     color: #fff;
-    font-size: 16px;
+    align-items: center;
+    font-size: 25px;
     padding: 10px;
+}
+
+.copy {
+    width: 80%;
+    text-align: center;
+    margin-left: 180px;
+}
+
+.git {
+    width: 20%;
+    padding: 0 40px;
+    text-align: end;
+    /* margin:10 30px; */
 }
 
 .hero-img:hover {
@@ -114,3 +134,59 @@ main {
     background:linear-gradient(to bottom, #ef027d 5%, #ff5bb0 100%);
 	background-color:#ef027d;
 }
+
+@media(max-width: 992px) {
+    .container {
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .copyright {
+        width: 100%;
+        display: flex;
+        padding: 10px;
+        
+    }
+    .copy {
+        width: 60%;
+        font-size: 20px;
+        margin-left: 10px;
+    }
+    .git {
+        width: 40%;
+        justify-content: flex-end;
+        padding: 0 5px;
+        margin:10 10px;
+    } 
+
+}
+
+@media(max-width: 767px) {
+    .container {
+        flex-direction: column;
+        align-items: center;  
+    }
+    .superman{
+        background-image: url(../img/plameta.png);
+    }
+    .copyright {
+        width: 100%;
+        display: flex;
+        padding: 10px;
+        
+    }
+    .copy {
+        width: 60%;
+        font-size: 13px;
+        margin-left: 5px;
+        text-align: left;
+    }
+    .git {
+        width: 40%;
+        justify-content: flex-end;
+        padding: 0 5px;
+        margin:10 10px;
+    }
+
+}
+
