@@ -70,10 +70,17 @@ main {
 }
 
 .hero-img {
+    
     position: relative;
     top: -60px;
     border-radius: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
 } 
+
+.superman_2 {
+    display: none;
+}
 
 .hero {
     font-size: 30px;
@@ -166,9 +173,14 @@ main {
         flex-direction: column;
         align-items: center;  
     }
-    .superman{
-        background-image: url(../img/plameta.png);
+    .superman {
+        display: none;
     }
+    .superman_2 {
+    
+        display: inline;
+    }
+
     .copyright {
         width: 100%;
         display: flex;
